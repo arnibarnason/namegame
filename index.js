@@ -617,7 +617,7 @@ $("#btnCheck").click(function () {
       incorrect--;
     }
   });
-  if (incorrect === 0) {
+  if (incorrect <= 4) {
     console.log("Kristófer");
     var secret = document.getElementById("secret");
     secret.setAttribute("style", "display: inline");
