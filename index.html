@@ -8,19 +8,22 @@
   <body>
     <div class="container crosswordDisplay">
       <img class="image" width=100 src="snudur.svg" alt="Snudur" />
+      <img class="image2" id="secret" width=600 src="snudurlok.svg" alt="SnudurLok" />
       <div class="row">
         <!-- Create & Play buttons required for user generated crossword - disabled for Proscribed questions -->
         <div class="btn btn-default disabled" id="btnCreate">Create</div>
         <div class="btn btn-default disabled" id="btnPlay">Play</div>
 
-        <div class="btn btn-default" id="btnReset">Reset</div>
-        <div class="btn btn-default" id="btnCheck">Check Answers</div>
+        <div class="btn btn-default" id="btnReset">Byrja aftur</div>
+        <div class="btn btn-default" id="btnCheck">SENDA SVAR!</div>
+        <div class="btn btn-default" id="secretBtnCheck">Þetta gengur frekar illa hjá þér.. Smelltu hér til að sýna nafnið :D</div>
       </div>
 
       <div class="center crossword" id="crossword"></div>
 
       <div class="btn" id="btnGen">Generate</div>
 
+          <p>ATH: Öll svör eru í nefnifalli</p>
       <div class="col-lg-6">
         <div class="clueBlock" id="cluesAcross">
           <div class="clueDirection" id="directionAcross">LÁRÉTT</div>
@@ -98,7 +101,7 @@
         </div>
       </div>
     </div>
-    
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script type="text/javascript" src="index.js"></script>
   </body>

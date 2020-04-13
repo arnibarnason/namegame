@@ -604,16 +604,33 @@ Generate();
 Play();
 
 //==================================================//
-
+var incorrect = 54;
+var checks = 20;
 $("#btnCheck").click(function () {
+  checks--;
   $(".square input").each(function () {
     if (!($(this).attr("data-letter") === $(this).val().toUpperCase())) {
       console.log("incorrect");
+      incorrect = 54;
       $(this).val("");
+    } else {
+      incorrect--;
     }
   });
+  if (incorrect === 0) {
+    console.log("Kristófer");
+    var secret = document.getElementById("secret");
+    secret.setAttribute("style", "display: inline");
+  } else if (checks <= 0) {
+    var secretButton = document.getElementById("secretBtnCheck");
+    secretButton.setAttribute("style", "display: inline");
+  }
 });
 
+$("#secretBtnCheck").click(function () {
+  var secret = document.getElementById("secret");
+  secret.setAttribute("style", "display: inline");
+});
 $("#btnReset").click(function () {
   location.reload();
 });
