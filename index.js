@@ -60,7 +60,10 @@ function FormatClues() {
     directionAcross = document.getElementById("directionAcross"),
     directionDown = document.getElementById("directionDown");
 
+  console.log(cluesAcross);
+  console.log(cluesDown);
   cluesAcross.innerHTML = "";
+
   cluesDown.innerHTML = "";
 
   cluesAcross.appendChild(directionAcross);
